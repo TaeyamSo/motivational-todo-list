@@ -1,0 +1,379 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    
+}
+body{
+/* background: 
+  radial-gradient(at 0% 0%, rgba(212, 194, 252, 0.5) 0, transparent 50%), 
+  linear-gradient(135deg, #D4C2FC 0%, #ac91fa 100%);    
+  min-height: 100vh; */
+  animation: rotate-bg-color 8s infinite;
+}
+@keyframes rotate-bg-color {
+  0% {
+    background-color: #D4C2FC;
+  }
+    50% {
+        background-color: #ac91fa;
+    }
+  100% {
+    background-color: #D4C2FC;
+  }
+}
+
+/* header */
+header{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 40px;
+    background-color: #28262C;
+    color: white;
+    font-family:'Courier New', Courier, monospace;
+
+}
+header .logo{
+    cursor: pointer;
+    
+}
+
+header nav ul{
+    display: flex;
+    gap: 30px;
+    justify-content: space-between;
+    list-style: none;
+}
+header nav ul li{
+    cursor: pointer;
+    transition:  0.3s;
+    border-bottom: 2px solid transparent;
+    
+}
+header nav ul li:hover{
+    cursor: pointer;
+    border-bottom: 2px solid #D4C2FC;
+}
+
+header nav ul li a , .logo a{
+    color: white;
+    cursor: pointer;
+    transition:  0.3s;
+    border: none;
+    text-decoration: none
+}
+
+/* quote */
+.quote-section{
+    display: flex;
+    justify-content: center;
+    margin: 40px 0;
+    cursor: pointer;
+}
+.quote{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    position: relative; 
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;;
+    font-size: 1.2rem;
+    /* background-image: url(C:\Users\ASUS\Desktop\MyJourney\Web\todo-list\todo-list\public\img.jpg); */
+    width: 80%;
+    height: 120px;
+    color: white;
+    border-radius: 5px;
+    padding: 0 5%;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.quote .filter{
+    background-color: #28262C;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    border-radius: inherit;
+
+}
+
+.quote h4, .quote h5, .quote p{
+    position: relative;  /* Add this */
+    z-index: 1;
+}
+
+/* todo */
+
+.section-todo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.section-todo .add-todo{
+    width: 80%;
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    align-items: center;
+}
+
+.section-todo .add-todo input{
+    width: 100%;
+    padding: 10px 10px 10px 30px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    background-color: white;
+    font-family:'Courier New', Courier, monospace;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+
+}
+
+
+.section-todo .add-todo button{
+    padding: 6px 20px 8px 20px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    text-align: center;
+    background-color: white;
+    font-family:'Courier New', Courier, monospace;
+    cursor: pointer;
+    border: 1px solid transparent;
+    background-color: #28262C;
+    color: white;
+        box-shadow:0;
+    transition: 0.3s;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+}
+.section-todo .add-todo button:hover , .section-todo .add-todo button:focus {
+    border: 1px solid white;
+
+}
+.section-todo .todo-list{
+    width: 80%;
+    margin: 40px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: stretch;
+    min-height: 15vh;
+
+}
+
+.section-todo .todo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.checkandtodo {
+    display: flex;
+    width: 80%;
+    min-width: 300px;
+    gap: 10px;
+}
+.checkandtodo textarea {
+    background-color: white;
+    width: 100%;
+    border-radius: 5px;
+    padding: 10px 10px 0 10px;
+    outline: none;
+    font-weight: bold;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+    
+}
+.checkandtodo input[type="checkbox"]{
+    width: 15px;
+    cursor: pointer;
+
+}
+.buttons{
+    display: flex;
+    gap: 5px;
+
+}
+
+.buttons button{
+    width: 80px;
+    padding: 5px 0;
+    font-size: 14px;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    background-color: #28262C;
+    color: white;
+    border: 1px solid transparent;
+    transition: 0.3s;
+    font-family:'Courier New', Courier, monospace;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+
+}
+.buttons button:hover , .buttons button:focus{
+    border: 1px solid white;
+}
+
+@media (max-width: 768px) {
+    .buttons{
+        width: 100%;
+    padding-left: 26px; 
+    }
+    .buttons button {
+        width: 65px;
+        font-size: 11px;
+    }
+    .todo{
+        flex-direction: column;
+    }
+    .checkandtodo{
+        width: 100%;
+    }
+    .section-todo .todo-list{
+        gap: 20px;
+    }
+    .quote h4{
+        font-size: 16px;
+    }
+    .quote h5{
+        font-size: 14px;
+    }.section-todo .add-todo input{
+        font-size: 14px;
+        padding: 10px;
+    }
+    
+}
+
+@media (max-width: 480px) {
+    .buttons button {
+        width: 50px;
+        font-size: 10px;
+        padding: 4px 0;
+    }
+}
+
+.buttons .delete{
+    background-color: red;
+    color: white;
+}
+
+.container .completed-todo{
+    font-family:'Courier New', Courier, monospace;
+    padding: 10px;
+    border-radius: 5px;     
+    font-weight: bold;
+
+   color: white;
+   background-color: #28262C;
+   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+}
+
+
+/* home  */
+
+.section-home{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /* min-height: calc(100vh - 60px); */
+    min-height: 90vh;
+}
+
+.section-home .text{
+    font-family:'Courier New', Courier, monospace;
+    max-width: 500px;
+    line-height: 1.5;
+    color: #28262C; 
+}
+.section-home .text h1{
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+.home-img{
+        border-radius: 100%;
+        height: 300px;
+        overflow: hidden;
+        position: relative;
+}
+.home-img img{
+    width: 300px;
+    animation: spin 5s linear infinite;
+    z-index: 0;
+}
+
+.img-filter{
+    z-index: 1;
+    cursor: pointer;
+    position: absolute;
+    display: flex  ;
+    justify-content: center;
+    color: white;
+    font-family:'Courier New', Courier, monospace;
+    font-size: 16px;
+    font-weight: bold;
+
+    align-items: center;
+    background-color: #28262cf4;
+    width: 100%;
+    height: 100%;
+    transition: 1s;
+}   
+
+.home-img:hover .img-filter{
+    width: 0%;
+}
+.img-filter span{
+    transition: 0.5s;
+white-space: nowrap;
+}
+.home-img:hover .img-filter span{
+color: transparent;
+}
+.text span{
+color: rgb(219, 8, 8);
+font-weight: bold;
+}
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@media (max-width: 1002px) {
+    .section-home{
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+                text-align: center;
+
+    }
+}
+
+@media (max-width: 600px) {
+    .section-home .text h1{
+        font-size: 2rem;
+        text-align: center;
+    }
+    .section-home .text h2{
+        font-size: 1.2rem;
+        text-align: center;
+    }
+}
