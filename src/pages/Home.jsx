@@ -1,4 +1,4 @@
-
+import myProfileImage from '../assets/image.png'; // Use a relative path to the file
 function Home() {
   return (
     <>
@@ -12,7 +12,7 @@ function Home() {
 
         <div className="home-img">
             <div className="img-filter"><span> Hover Me ! </span></div>
-            <img src="/image.png"/>
+            <img src={myProfileImage} alt="me"/>
         </div>
     </section>
     </>
