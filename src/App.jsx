@@ -15,8 +15,8 @@ function App() {
 <BrowserRouter>
       <Header />
       <Routes>
-        <Route path="/motivational-todo-list/home" element={<Home />} />
-        <Route path="/motivational-todo-list/todo" element={<Todopage />} />
+        <Route path="/" element={<Home />} />
+        <Route path="/todo" element={<Todopage />} />
       </Routes>
     </BrowserRouter>
         </>
